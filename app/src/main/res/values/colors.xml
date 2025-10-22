@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 基本颜色 - 无界面应用 -->
+    <color name="status_running">#30D158</color>
+    <color name="status_stopped">#FF6B6B</color>
+    <color name="status_unknown">#86868B</color>
+</resources>

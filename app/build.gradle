@@ -1,0 +1,48 @@
+plugins {
+    alias(libs.plugins.android.application)
+}
+
+android {
+    namespace 'com.atao.tdeviceservice'
+    compileSdk 36
+
+    defaultConfig {
+        applicationId "com.atao.tdeviceservice"
+        minSdk 31
+        targetSdk 36
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        debug {
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.debug
+        }
+        release {
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+}
+
+dependencies {
+    // 核心Android库（最小化）
+    implementation libs.appcompat
+    
+    // HTTP服务器
+    implementation 'org.nanohttpd:nanohttpd:2.3.1'
+    // JSON处理
+    implementation 'com.google.code.gson:gson:2.10.1'
+    // 权限处理
+    implementation 'com.karumi:dexter:6.2.3'
+}
