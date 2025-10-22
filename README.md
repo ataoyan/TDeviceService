@@ -37,7 +37,7 @@
 
 ```bash
 # 克隆项目
-git clone https://github.com/yourusername/TDeviceService.git
+git clone https://github.com/ataoyan/TDeviceService.git
 cd TDeviceService
 
 # 编译安装
